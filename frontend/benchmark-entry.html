@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Benchmark entry</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <form>
+      <div class="form-group row">
+        <div class="col-12">
+            <h1 class="text-center">Margin benchmark entry</h1>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="pseudonym" class="offset-1 col-2 col-form-label">Select your pseudonym</label> 
+        <div class="col-8">
+          <select id="pseudonym" name="pseudonym" aria-describedby="pseudonymHelpBlock" required="required" class="custom-select">
+            <option value="rabbit">Rabbit</option>
+            <option value="duck">Duck</option>
+            <option value="fish">Fish</option>
+          </select> 
+          <span id="pseudonymHelpBlock" class="form-text text-muted">Select the pseudonym you chose here. Please make sure to only use the pseudonym which belongs to you.</span>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="benchmarkValue" class="offset-1 col-2 col-form-label">Enter your value for the benchmark here</label> 
+        <div class="col-8">
+          <input id="benchmarkValue" name="benchmarkValue" placeholder="1.00" type="text" aria-describedby="benchmarkValueHelpBlock" class="form-control"> 
+          <span id="benchmarkValueHelpBlock" class="form-text text-muted">Please enter the measured value of your company for the benchmark *placeholder* here.</span>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="offset-1 col-2">Choose your form of verification</label> 
+        <div class="col-8">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input name="formOfSigning" id="formOfSigning_0" type="radio" aria-describedby="formOfSigningHelpBlock" class="custom-control-input" value="guided"> 
+            <label for="formOfSigning_0" class="custom-control-label">Guided Website Signing</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input name="formOfSigning" id="formOfSigning_1" type="radio" aria-describedby="formOfSigningHelpBlock" class="custom-control-input" value="byos"> 
+            <label for="formOfSigning_1" class="custom-control-label">Sign the Challenge with your own software</label>
+          </div> 
+          <span id="formOfSigningHelpBlock" class="form-text text-muted">In order to verify, that you are authorized to upload data for the pseudonym you chose, you need to sign a provided challenge. You can either do this by selecting your private key and let the frontend do the signing for you (the private key won't be uploaded) or you can download the challenge as a txt file and sign it with a tool like Kleopatra.</span>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="keyUpload" class="offset-1 col-2 col-form-label">Choose your private key</label> 
+        <div class="col-8">
+          <div class="input-group">
+            <input id="keyUpload" name="keyUpload" placeholder="C:\fakepath\key-private.asc" type="text" aria-describedby="keyUploadHelpBlock" class="form-control"> 
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <i class="fa fa-search"></i>
+              </div>
+            </div>
+          </div> 
+          <span id="keyUploadHelpBlock" class="form-text text-muted">Choose your private key here to sign the challenge. The key will not get uploaded in any way and will stay private (you can verify this by looking into the sourcecode).</span>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="challengeDownload" class="offset-1 col-2 col-form-label">Download Challenge</label> 
+        <div class="col-8">
+          <button name="submit" type="submit" class="btn btn-primary" id ="challengeDownload"><i class="fa fa-download"></i> Download file</button>
+          <span id="challengeUploadHelpBlock" class="form-text text-muted">Download the challenge here to sign it with your own application. Please make sure to only sign the challenge, not to encrypt it.</span>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="challengeUpload" class="offset-1 col-2 col-form-label">Upload signed Challenge</label> 
+        <div class="col-8">
+          <div class="input-group">
+            <input id="challengeUpload" name="challengeUpload" placeholder="C:\fakepath\challenge.txt.sig" type="text" aria-describedby="challengeUploadHelpBlock" required="required" class="form-control"> 
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <i class="fa fa-upload"></i>
+              </div>
+            </div>
+          </div> 
+          <span id="challengeUploadHelpBlock" class="form-text text-muted">Upload your signed challenge here. Please make sure the challenge is only *signed* but not encrypted, otherwise the upload will fail and the challenge is not solved.</span>
+        </div>
+      </div> 
+      <div class="form-group row">
+        <div class="col-12 text-center">
+          <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
