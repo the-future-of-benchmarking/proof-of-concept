@@ -1,0 +1,17 @@
+{
+  "name": "pgp-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "openpgp": "^4.10.9",
+    "qldb": "^3.1.2",
+    "uuid": "^8.3.2"
+  }
+}
