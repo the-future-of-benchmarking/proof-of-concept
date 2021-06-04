@@ -1,0 +1,15 @@
+{
+  "benchmarkId": "1",
+  "benchmarkName": "Turnover Benchmark SMB",
+  "benchmarkUnit": "€",
+  "benchmarkees": [{
+    "benchmarkeeId": "1",
+    "benchmarkeePseudonym": "s/21",
+    // separates System für Zuordnung Pseudonym => Firma 
+    "value": {
+      "valueId": "1",
+      "value": 5.5
+    }
+  }]
+
+}

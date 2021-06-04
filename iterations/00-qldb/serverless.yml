@@ -1,0 +1,56 @@
+service:
+  name: proof-of-concept
+# app and org for use with dashboard.serverless.com
+#app: your-app-name
+#org: your-org-name
+frameworkVersion: '2'
+
+# Add the serverless-webpack plugin
+plugins:
+  - serverless-webpack
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  first:
+    handler: first.hello
+  CreateQldbTable:
+    handler: first.hello
+    environment:
+      LEDGER_NAME: !Ref qldbLedger
+      LICENCE_TABLE_NAME: BicycleLicence
+  second:
+    handler: second.hello
+    events:
+      - http:
+          method: get
+          path: second
+
+resources:
+  Resources:
+    qldbLedger:
+      Type: AWS::QLDB::Ledger
+      Properties:
+        Name: qldb-simple-demo-${self:provider.stage}
+        DeletionProtection: false
+        PermissionsMode: ALLOW_ALL
+        Tags:
+          - 
+            Key: name
+            Value: qldb-simple-demo
+
+    qldbTable:
+      Type: Custom::qldbTable
+      DependsOn: qldbGuideLedger
+      Properties:
+        ServiceToken: !GetAtt CreateTableLambdaFunction.Arn
+        Version: 1.0  #change this to force redeploy
+
+    qldbIndex:
+      Type: Custom::qldbIndexes
+      DependsOn: qldbTable
+      Properties:
+        ServiceToken: !GetAtt CreateIndexLambdaFunction.Arn
+        Version: 1.0  #change this to force redeploy

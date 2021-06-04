@@ -1,0 +1,3 @@
+[submodule "iterations/simple-example"]
+	path = iterations/01-simple-example
+	url = https://github.com/the-future-of-benchmarking/simple-example
