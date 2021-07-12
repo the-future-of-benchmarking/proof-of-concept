@@ -1,3 +1,6 @@
 [submodule "iterations/simple-example"]
-	path = iterations/01-simple-example
+	path = iterations/02-simple-example/
 	url = https://github.com/the-future-of-benchmarking/simple-example
+[submodule "iterations/04-ipfs/go-ipfs-cluster-service"]
+	path = iterations/04-ipfs/go-ipfs-cluster-service
+	url = https://github.com/the-future-of-benchmarking/go-ipfs-cluster-service.git
