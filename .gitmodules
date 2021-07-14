@@ -1,6 +1,6 @@
 [submodule "iterations/simple-example"]
 	path = iterations/02-simple-example
-	url = https://github.com/the-future-of-benchmarking/simple-example
+	url = https://github.com/the-future-of-benchmarking/dapp.git
 [submodule "iterations/04-ipfs/go-ipfs-cluster-service"]
 	path = iterations/04-ipfs/go-ipfs-cluster-service
 	url = https://github.com/the-future-of-benchmarking/go-ipfs-cluster-service.git
@@ -9,5 +9,5 @@
 	url = https://github.com/the-future-of-benchmarking/paillier-experiment-dapp.git
 [submodule "iterations/03-homomorphic-encryption/implementation"]
 	path = iterations/03-homomorphic-encryption/implementation
-	url = https://github.com/the-future-of-benchmarking/simple-example
+	url = https://github.com/the-future-of-benchmarking/dapp.git
 	branch = homomorphic-encryption
