@@ -4,3 +4,6 @@
 [submodule "iterations/04-ipfs/go-ipfs-cluster-service"]
 	path = iterations/04-ipfs/go-ipfs-cluster-service
 	url = https://github.com/the-future-of-benchmarking/go-ipfs-cluster-service.git
+[submodule "iterations/03-homomorphic-encryption/experiment/basic"]
+	path = iterations/03-homomorphic-encryption/experiment/basic
+	url = https://github.com/the-future-of-benchmarking/paillier-experiment-dapp.git
