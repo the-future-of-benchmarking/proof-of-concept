@@ -7,3 +7,7 @@
 [submodule "iterations/03-homomorphic-encryption/experiment/basic"]
 	path = iterations/03-homomorphic-encryption/experiment/basic
 	url = https://github.com/the-future-of-benchmarking/paillier-experiment-dapp.git
+[submodule "iterations/03-homomorphic-encryption/implementation"]
+	path = iterations/03-homomorphic-encryption/implementation
+	url = https://github.com/the-future-of-benchmarking/simple-example
+	branch = homomorphic-encryption
