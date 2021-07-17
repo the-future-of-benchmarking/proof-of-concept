@@ -3,3 +3,6 @@ This monorepo holds all the code/submodules for the different iterations, descri
 
 ## Iterations
 ![./iterations.png](./iterations.png)
+
+## Documentation
+Please refer to the wiki at [https://github.com/the-future-of-benchmarking/proof-of-concept/wiki](https://github.com/the-future-of-benchmarking/proof-of-concept/wiki)
